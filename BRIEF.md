@@ -11,7 +11,7 @@ I want to send people here from my social profiles.
 - Centered card layout, max-width 480px
 - My name as a heading, short bio underneath
 - Profile photo placeholder (circle, 120px)
-- Dark mode by default with a light/dark toggle
+- Dark mode by default with a light/dark toggle. Use sun and moon icons for the light/dark toggle.
 - Smooth hover animations on the link buttons
 - Google Font: Inter
 - Use blue and green accent colors

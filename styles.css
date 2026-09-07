@@ -46,9 +46,14 @@ body{
 .btn:focus{outline:3px solid rgba(255,255,255,0.06);outline-offset:3px}
 .btn:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(2,6,23,0.55)}
 
-.controls{margin-top:1rem;display:flex;justify-content:center}
-.toggle{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:0.5rem 0.85rem;border-radius:8px;color:var(--muted);cursor:pointer;transition:transform .12s}
+.controls{display:flex;justify-content:flex-end;align-items:center;margin:-0.5rem 0 0.5rem}
+.toggle{display:inline-flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);width:2.5rem;height:2.5rem;border-radius:50%;color:var(--muted);cursor:pointer;transition:transform .12s ease, border-color .12s ease, color .12s ease, background .12s ease}
 .toggle:hover{transform:translateY(-2px)}
+.toggle:focus-visible{outline:2px solid rgba(255,255,255,0.5);outline-offset:2px}
+.toggle-icon{display:inline-flex;align-items:center;justify-content:center;width:1.1rem;height:1.1rem}
+.toggle-icon svg{width:1.1rem;height:1.1rem;display:block}
+.toggle .icon-moon{display:block}
+.toggle .icon-sun{display:none}
 
 .footer{margin-top:1.25rem;color:var(--muted);font-size:0.85rem}
 
@@ -60,6 +65,8 @@ body.light .btn{color:#0b1220;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
 body.light .btn-portfolio{background:linear-gradient(90deg,#2563eb,#60a5fa)}
 body.light .btn-linkedin{background:linear-gradient(90deg,#059669,#34d399)}
 body.light .btn-email{background:linear-gradient(90deg,#94a3b8,#cbd5e1)}
-body.light .toggle{border-color:rgba(11,18,32,0.06);color:#334155}
+body.light .toggle{border-color:rgba(11,18,32,0.06);color:#334155;background:rgba(11,18,32,0.04)}
+body.light .toggle .icon-moon{display:none}
+body.light .toggle .icon-sun{display:block}
 
 @media (max-width:520px){.card{padding:1.5rem}.name{font-size:1.25rem}}

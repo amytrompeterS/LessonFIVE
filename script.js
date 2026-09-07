@@ -3,23 +3,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const toggle = document.getElementById('theme-toggle');
 
   function applyTheme(theme){
-    if(theme === 'light'){
-      body.classList.remove('dark');
-      body.classList.add('light');
-      toggle.textContent = 'Dark Mode';
-      toggle.setAttribute('aria-pressed','true');
-    } else {
-      body.classList.remove('light');
-      body.classList.add('dark');
-      toggle.textContent = 'Light Mode';
-      toggle.setAttribute('aria-pressed','false');
-    }
+    const isLight = theme === 'light';
+
+    body.classList.toggle('light', isLight);
+    body.classList.toggle('dark', !isLight);
+    toggle.setAttribute('aria-pressed', String(isLight));
+    toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
   }
 
-  // Initialize theme (dark by default)
   const stored = localStorage.getItem('theme');
-  if(stored){
-    applyTheme(stored);
+  if(stored === 'light') {
+    applyTheme('light');
   } else {
     applyTheme('dark');
   }
